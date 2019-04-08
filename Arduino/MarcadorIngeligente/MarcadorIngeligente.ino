@@ -7,7 +7,9 @@
 
 const char* ssid = "ALSW";
 const char* password = "2526-4897";
-const char* mqtt_server = "broker.mqtt-dashboard.com";
+const char* usuario = "chepecarlos";
+const char* pass = "secretoespecial";
+const char* mqtt_server = "broker.shiftr.io";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -108,7 +110,7 @@ void reconnect() {
     lcd.setCursor(0, 0);
     lcd.print("Conectando con mqtt");
     // Attempt to connect
-    if (client.connect("ALSWMarcadorInteligente")) {
+    if (client.connect("ALSWMarcadorInteligente", usuario, pass)) {
       client.subscribe("ALSWMinion");
       Serial.println("connected");
       lcd.clear();
