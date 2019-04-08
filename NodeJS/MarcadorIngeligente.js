@@ -1,5 +1,6 @@
 var mqtt = require('mqtt')
-var client = mqtt.connect('mqtt://broker.mqttdashboard.com')
+var opciones = { username:'chepecarlos', password:'secretoespecial'}
+var client = mqtt.connect('mqtt://broker.shiftr.io',opciones)
 
 var GoogleSpreadsheet = require('google-spreadsheet');
 var async = require('async');
