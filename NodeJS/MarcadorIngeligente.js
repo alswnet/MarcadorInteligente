@@ -119,8 +119,8 @@ client.on('message', function(topic, message) {
       }
       celda.value = Hora + ":" + Minuto + ":" + Segundo;
       celda.save();
-      console.log("Hora guarda: " + celda.value + " Minion " + NombreMinion[ID]);
-      client.publish('ALSWMinion', NombreMinion[ID]);
+      console.log("Hora guarda: " + celda.value + " Minion " + NombreMinion[ID+1]);
+      client.publish('ALSWMinion', NombreMinion[ID+1]);
     });
   }
 })
